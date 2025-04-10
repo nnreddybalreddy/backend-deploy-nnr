@@ -1,19 +1,18 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
-      version = "5.64.0"
+      source  = "hashicorp/aws"
+      version = "5.93.0"
     }
   }
-    backend "s3" {
-    bucket = "daws78s-remote-state-3"
-    key    = "remote-expense-dev-bkendjenterra"
-    region = "us-east-1"
-    dynamodb_table="daws78s-locking1"
+  backend "s3" {
+    bucket         = "78s-remote-state-1"
+    key            = "backend888-terraform-expense"
+    region         = "us-east-1"
+    dynamodb_table = "daws78s-locking"
   }
 }
 
 provider "aws" {
-    region="us-east-1"
-  # Configuration options
+  region = "us-east-1"
 }
