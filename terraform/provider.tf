@@ -7,9 +7,9 @@ terraform {
   }
     backend "s3" {
     bucket = "78s-remote-state-1"
-    key    = "BACKEND-deploy_CICD_NNR24"
+    key    = "Tools2222_CICD_NNR24"
     region = "us-east-1"
-    dynamodb_table="use_lockfile"
+    dynamodb_table="daws78s-locking"
   }
 }
 
